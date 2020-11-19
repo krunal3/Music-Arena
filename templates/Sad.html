@@ -1,0 +1,52 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8">
+	<title>musical Arena</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/header.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/background.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'styles/player.css' %}">
+	<style>
+		body{
+			margin: 0;
+		}
+		</style>
+	</head>
+	<body>
+		<br><br><br><br><br>
+		<div id="first">
+			<h1 font-family="verdana" align="center" style="font-size: 40px;color: white;margin: 0;">Music Player: {{mood}} <h1>
+			</div>
+		<!--<div id="second" class="second">
+	<
+			<button onclick="myFunction()">
+		</div>
+		-->
+		<script src="{%static 'js/Sad.js' %}"></script>
+		<div id="queue"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Queue<input type="button" id="next" onclick="nextsong()"><hr></div>
+		<div id="third">
+			<div id="emoji">{{dests}}</div>
+			<div id="xyz">
+			&nbsp;&nbsp;&nbsp;Playing :&nbsp;&nbsp;
+			<label id="sname" align="center">none</label></div>
+			<div id="mod"><a href="getemotions" style="color: aliceblue;">getemotion2</a></div>
+			<audio controls id="main_slider">
+			  <source id="sel"  type="audio/mpeg">
+	Your browser does not support the audio element.
+			</audio>
+					
+							<!-- <form action="/" method = "POST">
+							{% csrf_token %}
+							<h2>hey your mood is {{dests}}</h2>
+							<input type="submit" value="get your mood">
+							</form> -->
+
+						</div>
+	
+</body>
+
+</html>
